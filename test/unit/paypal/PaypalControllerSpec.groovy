@@ -6,8 +6,8 @@ import spock.lang.Specification
 /**
  * See the API for {@link grails.test.mixin.web.ControllerUnitTestMixin} for usage instructions
  */
-@TestFor(PaymentController)
-class PaymentControllerSpec extends Specification {
+@TestFor(PaypalController)
+class PaypalControllerSpec extends Specification {
 
     def setup() {
     }

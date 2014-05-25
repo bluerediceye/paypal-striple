@@ -10,7 +10,7 @@ import urn.ebay.apis.eBLBaseComponents.*
 
 import java.text.SimpleDateFormat
 
-class PaymentController {
+class PaypalController {
     //todo this map can be replaced by a database store
     /**
      * guid to payment id mapping
@@ -26,9 +26,9 @@ class PaymentController {
     private Properties paypalProps;
     private PayPalAPIInterfaceServiceService service;
 
-    public PaymentController() {
+    public PaypalController() {
         paypalProps = new Properties()
-        paypalProps.load(PaymentController.getClassLoader().getResourceAsStream("sdk_config.properties"))
+        paypalProps.load(PaypalController.getClassLoader().getResourceAsStream("sdk_config.properties"))
         service = new PayPalAPIInterfaceServiceService(paypalProps);
     }
 
