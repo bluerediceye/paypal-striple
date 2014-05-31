@@ -98,11 +98,11 @@
             },
 
             paymentProcess: function () {
-                window.location.href = 'http://mings-mbp:8080/ebuyer/paypal/pay';
+                window.location.href = 'http://test.bluerediceye.eu.cloudbees.net/paypal/pay';
             },
 
             subscribeProcess: function () {
-                window.location.href = 'http://mings-mbp:8080/ebuyer/paypal/subscribe';
+                window.location.href = 'http://test.bluerediceye.eu.cloudbees.net/paypal/subscribe';
             }
         };
 

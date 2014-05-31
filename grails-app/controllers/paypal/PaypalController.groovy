@@ -140,8 +140,8 @@ class PaypalController {
         planA.setDescription("Unlimited (Professional)");
         planA.setType(Plan.SUBSCRIPTION);
 
-        String returnUrl = "http://mings-mbp:8080/ebuyer/paypal/paypalsubscriptioncallback";
-        String cancelUrl = "http://mings-mbp:8080/ebuyer/paypal/paypalsubscriptioncallback";
+        String returnUrl = "http://test.bluerediceye.eu.cloudbees.net/paypal/paypalsubscriptioncallback";
+        String cancelUrl = "http://test.bluerediceye.eu.cloudbees.net/paypal/paypalsubscriptioncallback";
         String approvedRedirectUrl = processPlanSubscription(planA, returnUrl, cancelUrl, "li.mingxyz+paypal+buyer@gmail.com");
         redirect(url: approvedRedirectUrl);
     }
@@ -154,8 +154,8 @@ class PaypalController {
         planB.setCost("10");
         planB.setName("Pay as You Use (single payment)");
         planB.setDescription("100 Responses")
-        String returnUrl = "http://mings-mbp:8080/ebuyer/paypal/paypalpaymentcallback_return";
-        String cancelUrl = "http://mings-mbp:8080/ebuyer/paypal/paypalpaymentcallback_cancel";
+        String returnUrl = "http://test.bluerediceye.eu.cloudbees.net/paypal/paypalpaymentcallback_return";
+        String cancelUrl = "http://test.bluerediceye.eu.cloudbees.net/paypal/paypalpaymentcallback_cancel";
         String approvedRedirectUrl = processPlanPayment(planB, returnUrl, cancelUrl);
         redirect(url: approvedRedirectUrl);
     }
@@ -217,7 +217,7 @@ class PaypalController {
         if (setExpressCheckoutResponse != null && setExpressCheckoutResponse.getAck().toString().equalsIgnoreCase("SUCCESS")) {
             return "https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=" + setExpressCheckoutResponse.getToken();
         }else{
-            return  "http://mings-mbp:8080/ebuyer/paypal/fail";
+            return  "http://test.bluerediceye.eu.cloudbees.net/paypal/fail";
         }
     }
 

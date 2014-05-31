@@ -49,7 +49,7 @@
 <body>
 <h1>Charge $10 with Stripe</h1>
 
-<form action="/ebuyer/stripe/subscribe" method="POST" id="payment-form">
+<form action="/stripe/subscribe" method="POST" id="payment-form">
     <span class="payment-errors"></span>
 
     <div class="form-row">
