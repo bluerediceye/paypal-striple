@@ -89,6 +89,7 @@
                 $('button').on('click', function (e) {
                     e.preventDefault();
 
+                    //noinspection JSUnresolvedFunction
                     if ($(e.target).hasClass('pay')) {
                         that.paymentProcess();
                     } else {
@@ -98,11 +99,11 @@
             },
 
             paymentProcess: function () {
-                window.location.href = 'http://mings-mbp:8080/ebuyer/paypal/pay';
+                window.location.href = 'http://mings-mbp:8080/ebuyer/stripe/showPaymentForm';
             },
 
             subscribeProcess: function () {
-                window.location.href = 'http://mings-mbp:8080/ebuyer/paypal/subscribe';
+                window.location.href = 'http://mings-mbp:8080/ebuyer/stripe/showSubscriptionForm';
             }
         };
 

@@ -51,15 +51,19 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
         // runtime 'mysql:mysql-connector-java:5.1.27'
         // runtime 'org.postgresql:postgresql:9.3-1100-jdbc41'
+
+
         compile 'com.paypal.sdk:rest-api-sdk:0.9.0'
         compile 'com.paypal.sdk:merchantsdk:2.8.114'
+        compile 'com.stripe:stripe-java:1.12.0'
     }
 
     plugins {
         // plugins for the build system only
         build ":tomcat:7.0.52.1"
 
-        // plugins for the compile step
+        // plugins for the compile
+
         compile ":scaffolding:2.0.2"
         compile ':cache:1.1.1'
 

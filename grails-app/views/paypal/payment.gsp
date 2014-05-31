@@ -98,11 +98,11 @@
             },
 
             paymentProcess: function () {
-                window.location.href = 'http://mings-mbp:8080/paypal/payment/pay';
+                window.location.href = 'http://mings-mbp:8080/ebuyer/paypal/pay';
             },
 
             subscribeProcess: function () {
-                window.location.href = 'http://mings-mbp:8080/paypal/payment/subscribe';
+                window.location.href = 'http://mings-mbp:8080/ebuyer/paypal/subscribe';
             }
         };
 

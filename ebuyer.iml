@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+<module type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
       <configuration>
         <fileset id="Grails" name="Grails" removed="false">
+          <file>file://$MODULE_DIR$/../paypal/web-app/WEB-INF/applicationContext.xml</file>
           <file>file://$MODULE_DIR$/web-app/WEB-INF/applicationContext.xml</file>
         </fileset>
       </configuration>
@@ -72,9 +73,11 @@
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-el/7.0.52/tomcat-embed-el-7.0.52.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-jasper/7.0.52/tomcat-embed-jasper-7.0.52.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-catalina-ant/7.0.52/tomcat-catalina-ant-7.0.52.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/com/stripe/stripe-java/1.12.0/stripe-java-1.12.0.jar!/" />
+          <root url="file://$MODULE_DIR$/lib" />
+          <root url="jar://$MAVEN_REPOSITORY$/com/paypal/sdk/merchantsdk/2.8.114/merchantsdk-2.8.114.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/com/paypal/sdk/paypal-core/1.6.0/paypal-core-1.6.0.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/com/paypal/sdk/rest-api-sdk/0.9.0/rest-api-sdk-0.9.0.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/com/paypal/sdk/merchantsdk/2.8.114/merchantsdk-2.8.114.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
@@ -82,8 +85,10 @@
           <root url="jar://$USER_HOME$/.ideaLibSources/rest-api-sdk-0.8.0-sources.jar!/" />
           <root url="jar://$USER_HOME$/.ideaLibSources/rest-api-sdk-0.9.0-sources.jar!/" />
           <root url="jar://$USER_HOME$/.ideaLibSources/merchantsdk-2.8.114-sources.jar!/" />
+          <root url="jar://$USER_HOME$/.ideaLibSources/stripe-java-1.12.0-sources.jar!/" />
         </SOURCES>
         <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../paypal/lib" recursive="false" />
       </library>
     </orderEntry>
     <orderEntry type="library" name="jquery" level="application" />

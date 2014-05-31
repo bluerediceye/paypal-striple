@@ -62,6 +62,7 @@ class PaypalController {
         GetExpressCheckoutDetailsRequestType reqType = new GetExpressCheckoutDetailsRequestType(request.getParameter("token"));
         req.setGetExpressCheckoutDetailsRequest(reqType);
         GetExpressCheckoutDetailsResponseType resp = service.getExpressCheckoutDetails(req);
+
         if (resp != null && resp.getAck().toString().equalsIgnoreCase("SUCCESS")) {
             Map<Object, Object> map = new LinkedHashMap<Object, Object>();
             map.put("ack", resp.getAck());
@@ -127,7 +128,7 @@ class PaypalController {
         }
 
         //todo show successful payment page
-        render(text: "Successful payment")
+        render(text: "Successful subscription")
     }
 
 
@@ -139,8 +140,8 @@ class PaypalController {
         planA.setDescription("Unlimited (Professional)");
         planA.setType(Plan.SUBSCRIPTION);
 
-        String returnUrl = "http://mings-mbp:8080/paypal/payment/paypalsubscriptioncallback";
-        String cancelUrl = "http://mings-mbp:8080/paypal/payment/paypalsubscriptioncallback";
+        String returnUrl = "http://mings-mbp:8080/ebuyer/paypal/paypalsubscriptioncallback";
+        String cancelUrl = "http://mings-mbp:8080/ebuyer/paypal/paypalsubscriptioncallback";
         String approvedRedirectUrl = processPlanSubscription(planA, returnUrl, cancelUrl, "li.mingxyz+paypal+buyer@gmail.com");
         redirect(url: approvedRedirectUrl);
     }
@@ -153,8 +154,8 @@ class PaypalController {
         planB.setCost("10");
         planB.setName("Pay as You Use (single payment)");
         planB.setDescription("100 Responses")
-        String returnUrl = "http://mings-mbp:8080/paypal/payment/paypalpaymentcallback_return";
-        String cancelUrl = "http://mings-mbp:8080/paypal/payment/paypalpaymentcallback_cancel";
+        String returnUrl = "http://mings-mbp:8080/ebuyer/paypal/paypalpaymentcallback_return";
+        String cancelUrl = "http://mings-mbp:8080/ebuyer/paypal/paypalpaymentcallback_cancel";
         String approvedRedirectUrl = processPlanPayment(planB, returnUrl, cancelUrl);
         redirect(url: approvedRedirectUrl);
     }
@@ -216,7 +217,7 @@ class PaypalController {
         if (setExpressCheckoutResponse != null && setExpressCheckoutResponse.getAck().toString().equalsIgnoreCase("SUCCESS")) {
             return "https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=" + setExpressCheckoutResponse.getToken();
         }else{
-            return "http://mings-mbp:8080/paypal/payment/fail";
+            return  "http://mings-mbp:8080/ebuyer/paypal/fail";
         }
     }
 
